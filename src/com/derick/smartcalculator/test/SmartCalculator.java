@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.derick.smartcalculator;
+package com.derick.smartcalculator.test;
 
 import java.util.Scanner;
 
@@ -68,7 +68,7 @@ public class SmartCalculator {
                 default:
                     System.out.println("You typed unavaiable letter!");
             }
-            System.out.println("Do you want to repeat? Y/N");
+            System.out.println("Do you want to stop? Y/N");
             YNGuest = input.nextLine();
             if(YNGuest.equalsIgnoreCase("y")){
                 flag = false;
