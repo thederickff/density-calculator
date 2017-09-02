@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.derick.smartcalculator.view;
+package com.smartcalculator.views;
 
 import javax.swing.JOptionPane;
 
@@ -11,14 +11,14 @@ import javax.swing.JOptionPane;
  *
  * @author derickfelix
  */
-public class MainForm extends javax.swing.JFrame {
+public class DensityCalculator extends javax.swing.JFrame {
 
     private char guestResult;
 
     /**
      * Creates new form MainForm
      */
-    public MainForm() {
+    public DensityCalculator() {
         initComponents();
         configComponents();
     }
@@ -66,7 +66,7 @@ public class MainForm extends javax.swing.JFrame {
         paneMain.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         lblMainImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMainImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/derick/smartcalculator/res/density-main-image.png"))); // NOI18N
+        lblMainImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/smartcalculator/resources/density-main-image.png"))); // NOI18N
 
         spnDensity.setModel(new javax.swing.SpinnerNumberModel(0.0d, 0.0d, null, 1.0d));
 
@@ -116,7 +116,7 @@ public class MainForm extends javax.swing.JFrame {
                     .addComponent(spnMass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(spnVolume, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblVolume))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         paneButtons.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -254,9 +254,9 @@ public class MainForm extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(paneMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(paneMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(paneButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(paneResult, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -389,20 +389,21 @@ public class MainForm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DensityCalculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DensityCalculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DensityCalculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DensityCalculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainForm().setVisible(true);
+                new DensityCalculator().setVisible(true);
             }
         });
     }
@@ -412,8 +413,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JButton btnChangeDensity;
     private javax.swing.JButton btnChangeMass;
     private javax.swing.JButton btnChangeVolume;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblDensity;
     private javax.swing.JLabel lblMainImage;
     private javax.swing.JLabel lblMass;
@@ -424,8 +423,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JPanel paneButtons;
     private javax.swing.JLabel paneDate;
     private javax.swing.JPanel paneMain;
-    private javax.swing.JPanel paneMain1;
-    private javax.swing.JPanel paneMain2;
     private javax.swing.JPanel paneName;
     private javax.swing.JPanel paneResult;
     private javax.swing.JSpinner spnDensity;
